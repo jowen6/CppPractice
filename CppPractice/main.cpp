@@ -9,6 +9,8 @@
 #include <iostream>
 #include <cmath>
 
+
+
 struct CartesianVector{
     float X;
     float Y;
@@ -19,29 +21,36 @@ struct CartesianVector{
     
     CartesianVector(float x) :
         X(x), Y(x), Z(x) {}
+    
+    
+    void print(){
+        std::cout << "Components: " << X << ", " << Y << ", " << Z << "\n";
+    }
+    
+    
+    float norm(){
+        float Norm = X*X + Y*Y + Z*Z;
+        Norm = std::sqrt(Norm);
+        return Norm;
+    }
+    
+    
 };
 
-void PrintCartesianVectorComponents(CartesianVector);
-float CartesianVectorNorm(CartesianVector);
+
+
+
 
 int main(int argc, const char * argv[]) {
     CartesianVector CVec1(-3,0,0);
     CartesianVector CVec2(2.1);
     
-    PrintCartesianVectorComponents(CVec1);
-    PrintCartesianVectorComponents(CVec2);
+    CVec1.print();
+    CVec2.print();
     
-    std::cout << "Norm: "<< CartesianVectorNorm(CVec1) << "\n";
+    std::cout << "Norm: "<< CVec1.norm() << "\n";
     
     return 0;
 }
 
-void PrintCartesianVectorComponents(CartesianVector V){
-    std::cout << "Components: " << V.X << ", " << V.Y << ", " << V.Z << "\n";
-}
 
-float CartesianVectorNorm(CartesianVector V){
-    float Norm = V.X*V.X + V.Y*V.Y + V.Z*V.Z;
-    Norm = std::sqrt(Norm);
-    return Norm;
-}
