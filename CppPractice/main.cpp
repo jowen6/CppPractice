@@ -9,19 +9,19 @@
 #include <iostream>
 #include <cmath>
 
-
-
+//Assuming T is numerical
+template<class T>
 struct CartesianVector{
-    float X;
-    float Y;
-    float Z;
+    T X;
+    T Y;
+    T Z;
     
-    CartesianVector() {};
+    CartesianVector() {}
     
-    CartesianVector(float x, float y, float z) :
+    CartesianVector(T x, T y, T z) :
         X(x), Y(y), Z(z) {}
     
-    CartesianVector(float x) :
+    CartesianVector(T x) :
         X(x), Y(x), Z(x) {}
     
     
@@ -31,7 +31,7 @@ struct CartesianVector{
         std::cout << "Components: " << X << ", " << Y << ", " << Z << "\n";
     }
     
-    
+    //norms are not always of the same class as the vector components
     float norm(){
         float Norm = X*X + Y*Y + Z*Z;
         Norm = std::sqrt(Norm);
@@ -39,16 +39,19 @@ struct CartesianVector{
     }
     
     
-    CartesianVector operator+(const CartesianVector V);
+    CartesianVector<T> operator+(const CartesianVector<T> V);
     void operator+=(const CartesianVector V);
-    CartesianVector operator-(const CartesianVector V);
-    void operator-=(const CartesianVector V);
+    CartesianVector<T> operator-(const CartesianVector<T> V);
+    void operator-=(const CartesianVector<T> V);
+    
+    
 };
 
 
-
-CartesianVector CartesianVector::operator+(const CartesianVector V){
-    CartesianVector VectorSum;
+//Overloaded operators assume the two vectors are of same type
+template<class T>
+CartesianVector<T> CartesianVector<T>::operator+(const CartesianVector<T> V){
+    CartesianVector<T> VectorSum;
     VectorSum.X = X + V.X;
     VectorSum.Y = Y + V.Y;
     VectorSum.Z = Z + V.Z;
@@ -56,16 +59,18 @@ CartesianVector CartesianVector::operator+(const CartesianVector V){
     return VectorSum;
 };
 
-void CartesianVector::operator+=(const CartesianVector V){
-    CartesianVector VectorSum;
+
+template<class T>
+void CartesianVector<T>::operator+=(const CartesianVector<T> V){
     X = X + V.X;
     Y = Y + V.Y;
     Z = Z + V.Z;
-
+    
 };
 
-CartesianVector CartesianVector::operator-(const CartesianVector V){
-    CartesianVector VectorSum;
+template<class T>
+CartesianVector<T> CartesianVector<T>::operator-(const CartesianVector<T> V){
+    CartesianVector<T> VectorSum;
     VectorSum.X = X - V.X;
     VectorSum.Y = Y - V.Y;
     VectorSum.Z = Z - V.Z;
@@ -73,8 +78,8 @@ CartesianVector CartesianVector::operator-(const CartesianVector V){
     return VectorSum;
 };
 
-void CartesianVector::operator-=(const CartesianVector V){
-    CartesianVector VectorSum;
+template<class T>
+void CartesianVector<T>::operator-=(const CartesianVector<T> V){
     X = X - V.X;
     Y = Y - V.Y;
     Z = Z - V.Z;
@@ -83,9 +88,10 @@ void CartesianVector::operator-=(const CartesianVector V){
 
 
 
+
 int main(int argc, const char * argv[]) {
-    CartesianVector CVec1(-3,0,0);
-    CartesianVector CVec2(2.1);
+    CartesianVector<double> CVec1(-3.0,1.0,1.0);
+    CartesianVector<double> CVec2(2);
     CVec2 -= CVec1;
     CVec1.print();
     CVec2.print();
