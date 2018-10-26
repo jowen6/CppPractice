@@ -28,22 +28,18 @@ double rectangle::Perimeter(){
 
 
 double triangle::Area(){
-    //CartesianVector<double> E1 = V2-V1;
-    //CartesianVector<double> E2 = V3-V1;
-    CartesianVector<double> E1(1,2,3);
-    CartesianVector<double> E2(4,5,6);
+    CartesianVector<double> E1 = V2-V1;
+    CartesianVector<double> E2 = V3-V1;
     CartesianVector<double> E3(E1.Y*E2.Z - E1.Z*E2.Y, E1.Z*E2.X - E1.X*E2.Z, E1.X*E2.Y - E1.Y*E2.X);
     
     return 0.5*E3.norm();
 }
 
 double triangle::Perimeter(){
-    //CartesianVector<double> E1 = V1-V2;
-    //CartesianVector<double> E2 = V2-V3;
-    //CartesianVector<double> E3 = V3-V2;
-    CartesianVector<double> E1(1,2,3);
-    CartesianVector<double> E2(4,5,6);
-    CartesianVector<double> E3(7,8,9);
+    CartesianVector<double> E1 = V1-V2;
+    CartesianVector<double> E2 = V2-V3;
+    CartesianVector<double> E3 = V3-V2;
+
 
     return E1.norm() + E2.norm() + E3.norm();
 }

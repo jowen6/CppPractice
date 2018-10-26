@@ -14,9 +14,7 @@
 #include "CartesianVector.hpp"
 
 class Shape{
-public:
-    Shape();
-    
+    public:
     virtual double Area()=0;
     virtual double Perimeter()=0;
     double AreaPlusPerimeter();
@@ -24,21 +22,25 @@ public:
 };
 
 class rectangle: public Shape{
-public:
-    rectangle(double Length = 1, double Width = 1);
+    public:
     double Length;
     double Width;
+    rectangle(double L = 1, double W = 1){
+        Length = L;
+        Width = W;
+    };
+
     double Area();
     double Perimeter();
 };
 
 class triangle: public Shape{
-public:
+    public:
     CartesianVector<double> V1;
     CartesianVector<double> V2;
     CartesianVector<double> V3;
     
-    triangle(double v1[2], double v2[2], double v3[2]) : Shape()
+    triangle(double v1[2], double v2[2], double v3[2])
     {
         V1.X = v1[0];
         V1.Y = v1[1];
