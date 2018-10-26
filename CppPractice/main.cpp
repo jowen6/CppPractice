@@ -26,11 +26,11 @@ int main(int argc, const char * argv[]) {
     VecPrint(v1);
     
     std::vector<double> v2{1,2,3,4,5};
-    VecCosIndex(v2);
+    VecCosRange(v2);
     VecPrint(v2);
     
     std::vector<double> v3{1,2,3,4,5};
-    VecCosIndex(v3);
+    VecCosIter(v3);
     VecPrint(v3);
     
     return 0;

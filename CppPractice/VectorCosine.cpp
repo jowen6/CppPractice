@@ -19,8 +19,10 @@ void VecCosIndex(std::vector<double> &V){
 }
 
 void VecCosRange(std::vector<double> &V){
+    int n = 0;
     for (double i : V){
-        i = cos(i);
+        V[n] = cos(i);
+        n = n+1;
     }
 }
 
