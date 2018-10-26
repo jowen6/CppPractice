@@ -17,8 +17,8 @@ class Shape{
 public:
     Shape();
     
-    virtual double Area(){return 0;};
-    virtual double Perimeter(){return 0;};
+    virtual double Area()=0;
+    virtual double Perimeter()=0;
     double AreaPlusPerimeter();
     
 };

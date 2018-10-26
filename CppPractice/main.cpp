@@ -9,7 +9,8 @@
 #include <iostream>
 #include "CartesianVector.hpp"
 #include "Shape.hpp"
-
+#include <vector>
+#include "VectorCosine.hpp"
 
 
 int main(int argc, const char * argv[]) {
@@ -19,6 +20,18 @@ int main(int argc, const char * argv[]) {
     CVec1.print();
     CVec2.print();
     std::cout << "Norm: "<< CVec2.norm() << "\n";
+    
+    std::vector<double> v1{1,2,3,4,5};
+    VecCosIndex(v1);
+    VecPrint(v1);
+    
+    std::vector<double> v2{1,2,3,4,5};
+    VecCosIndex(v2);
+    VecPrint(v2);
+    
+    std::vector<double> v3{1,2,3,4,5};
+    VecCosIndex(v3);
+    VecPrint(v3);
     
     return 0;
 }
