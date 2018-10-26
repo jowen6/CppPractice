@@ -11,7 +11,7 @@
 #include "Shape.hpp"
 #include <vector>
 #include "VectorCosine.hpp"
-
+#include "FindSignAndMagnitude.hpp"
 
 int main(int argc, const char * argv[]) {
     CartesianVector<double> CVec1(-3.0,1.0,1.0);
@@ -33,6 +33,12 @@ int main(int argc, const char * argv[]) {
     VecCosIter(v3);
     VecPrint(v3);
     
+ 
+    std::pair<int, double> Pair = FindSignAndMagnitude(-1.69434343);
+    PrintPair(Pair);
+    
+    std::pair<int, double> Pair2 = FindSignAndMagnitude(110900.454577);
+    PrintPair(Pair2);
     return 0;
 }
 
