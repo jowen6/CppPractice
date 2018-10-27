@@ -5,9 +5,6 @@ project (cpp_practice)
 # Enable testing allows you to add tests and run them via "make test"
 enable_testing()
 
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
-
 # When you compile, like with g++ my_code.cpp, you can pass flags. We pass a few
 # We pass the C++ standard version, which I choose to be 14, then a bunch of warnings
 # where the compiler will warn us if we have sketchy code. Wall, Wextra, and Wno-unused
@@ -17,7 +14,14 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 SET(CMAKE_CXX_FLAGS "-std=c++14 -Wall -O3 -Wextra -Wno-unused")
 
+# Include directories is hacky nowadays, but easy for us:
+# This tells CMake to teach the compiler where to look for header files
+# Usually, your computer looks in your current compilation directory, somewhere special like
+# /usr/include or /usr/local/include, but otherwise it needs help.
+# With this, you can #include <catch.hpp>, which sits in that third_party/ directory
 include_directories("third_party/")
 
+# Tell CMake to go look into CppPractice to find some code, and also go into ExampleTest for code 
 add_subdirectory(CppPractice)
 add_subdirectory(ExampleTest)
+
