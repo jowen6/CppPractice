@@ -12,6 +12,7 @@
 #include <vector>
 #include "VectorCosine.hpp"
 #include "FindSignAndMagnitude.hpp"
+#include "EllipsoidIntersect.hpp"
 
 int main(int argc, const char * argv[]) {
     CartesianVector<double> CVec1(-3.0,1.0,1.0);
@@ -55,6 +56,13 @@ int main(int argc, const char * argv[]) {
     
     std::pair<int, double> Pair2 = FindSignAndMagnitude(110900.454577);
     PrintPair(Pair2);
+
+    
+    //Ellipsoid intersection
+    std::vector<double> ObserverLoc{1,0,0};
+    std::vector<double> VObserver{0, 1, 0};
+    std::vector<double> EllipseCoord = EllipsoidIntersect(VObserver, ObserverLoc, 1, 1, 1);
+    PrintEllipsoidCoord(EllipseCoord);
     return 0;
 }
 
