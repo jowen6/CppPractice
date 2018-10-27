@@ -2,7 +2,7 @@
                           // in ONE executable test! You can't multiply define
                           // "main"
 
-#include "../math_library.h"
+#include "../example_library.h"
 #include <catch.hpp> // We can do this <> include because CMakeLists at the top ADDED it to our "Include Directories"
 // Technically, this is bad practice, but we're trying to learn basic ideas
 // first!
