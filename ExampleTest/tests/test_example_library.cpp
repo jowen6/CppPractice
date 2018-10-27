@@ -18,3 +18,19 @@ TEST_CASE("Add Three to a Vector", "[vector add]") {
     REQUIRE(expected_result[i] == result[i]);
   }
 }
+
+TEST_CASE("Take pi and 2 and triple them", "[make pair test]") {
+    // constexpr is a fancy new C++11 thing that specifies
+    // a value or function can be *known* at compile time
+    // so don't waste run time generating them
+    constexpr double pi = M_PI; // M_PI is defined in cmath header
+    const int two = 2;
+
+    double result_double;
+    int result_int;
+    std::tie(result_double, result_int) = TakeADoubleAndAnIntAndTripleThem(pi, two);
+
+    REQUIRE(std::fabs(result_double - 3.0*pi) < 1e-13);
+    REQUIRE(3*2 == result_int); 
+}
+// Always add a new line at an end of a file; gitlab/github complain otherwise
