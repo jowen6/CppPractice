@@ -17,6 +17,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 SET(CMAKE_CXX_FLAGS "-std=c++14 -Wall -O3 -Wextra -Wno-unused")
 
+include_directories("third_party/")
 
 add_subdirectory(CppPractice)
-
+add_subdirectory(ExampleTest)
