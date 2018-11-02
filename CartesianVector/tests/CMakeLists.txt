@@ -9,7 +9,8 @@ add_executable(${test_name} test_CartesianVector_library.cpp)
 
 # This test uses code from example_library.cpp, so it needs to link against it!
 # Note, if it JUST used header stuff, you'd be fine and wouldn't need to link
-target_link_libraries(${test_name} CartesianVector)
+#THIS IS THE LIBRARY NAME WHICH IS MADE IN ANOTHER CMAKELIST
+target_link_libraries(${test_name} CartesianVector_library)
 
 # This mysterious line makes no sense to me, but never forget it
 # You specify the NAME of the test and the COMMAND to run I guess (it's confusing)
