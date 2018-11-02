@@ -22,6 +22,6 @@ SET(CMAKE_CXX_FLAGS "-std=c++14 -Wall -O3 -Wextra -Wno-unused")
 include_directories("third_party/")
 
 # Tell CMake to go look into CppPractice to find some code, and also go into ExampleTest for code 
-add_subdirectory(CppPractice)
+#add_subdirectory(CppPractice)
 #add_subdirectory(ExampleTest)
 add_subdirectory(CartesianVector)
