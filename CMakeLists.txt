@@ -11,6 +11,7 @@ enable_testing()
 # are warnings, where Wall is "all" warnings (but not really...), Wextra is extra warnings,
 # and Wno-unused is a "warn me when I have unused variables, which probably means something
 # is sketchy in my code"
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 SET(CMAKE_CXX_FLAGS "-std=c++14 -Wall -O3 -Wextra -Wno-unused")
 
