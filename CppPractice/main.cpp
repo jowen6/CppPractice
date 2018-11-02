@@ -7,26 +7,27 @@
 //
 
 #include <iostream>
-#include "CartesianVector.hpp"
-#include "Shape.hpp"
+//#include "CartesianVector.hpp"
+//#include "Shape.hpp"
 #include <vector>
 #include "VectorCosine.hpp"
 #include "FindSignAndMagnitude.hpp"
 #include "EllipsoidIntersect.hpp"
 
 int main(int argc, const char * argv[]) {
+    /*
     CartesianVector<double> CVec1(-3.0,1.0,1.0);
     CartesianVector<double> CVec2(2);
     CVec2 -= CVec1;
     CVec1.print();
     CVec2.print();
     std::cout << "Norm: "<< CVec2.norm() << "\n";
-    
+    */
     //Shape functionality examples
     double vert1[] = {0,0};
     double vert2[] = {1,0};
     double vert3[] = {0,1};
-    
+    /*
     triangle Tri(vert1, vert2, vert3);
     std::cout << Tri.Area() << "\n";
     std::cout << Tri.Perimeter() << "\n";
@@ -36,7 +37,7 @@ int main(int argc, const char * argv[]) {
     std::cout << Rec.Area() << "\n";
     std::cout << Rec.Perimeter() << "\n";
     std::cout << Rec.AreaPlusPerimeter() << "\n";
-    
+    */
     //Convert vector to cos(vector) examples
     std::vector<double> v1{1,2,3,4,5};
     VecCosIndex(v1);
