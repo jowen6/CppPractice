@@ -42,7 +42,7 @@ TEST_CASE("Check triangle perimeter function", "[triangle perimeter]") {
     
     triangle TRI(V1,V2,V3);
     
-    REQUIRE(std::abs(TRI.Perimeter()-2-std::sqrt(2)) < 0.00001);
+    REQUIRE(std::fabs(TRI.Perimeter()-2-std::sqrt(2)) < 0.00001);
 
     
 }
