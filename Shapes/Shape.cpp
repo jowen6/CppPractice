@@ -38,7 +38,7 @@ double triangle::Area(){
 double triangle::Perimeter(){
     CartesianVector<double> E1 = V1-V2;
     CartesianVector<double> E2 = V2-V3;
-    CartesianVector<double> E3 = V3-V2;
+    CartesianVector<double> E3 = V3-V1;
 
 
     return E1.norm() + E2.norm() + E3.norm();

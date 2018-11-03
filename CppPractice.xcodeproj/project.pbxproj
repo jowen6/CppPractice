@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		46FE93DA2181567A00810D9A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46FE93D92181567A00810D9A /* main.cpp */; };
-		46FE93E22182554A00810D9A /* Shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46FE93E02182554A00810D9A /* Shape.cpp */; };
-		46FE93E5218270D400810D9A /* CartesianVector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46FE93E3218270D400810D9A /* CartesianVector.cpp */; };
 		46FE93E8218352E000810D9A /* VectorCosine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46FE93E6218352E000810D9A /* VectorCosine.cpp */; };
 		46FE93EB218368F800810D9A /* FindSignAndMagnitude.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46FE93E9218368F800810D9A /* FindSignAndMagnitude.cpp */; };
 		46FE93EE2184DDDA00810D9A /* EllipsoidIntersect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46FE93EC2184DDDA00810D9A /* EllipsoidIntersect.cpp */; };
+		46FE93F1218BF2F400810D9A /* CartesianVector in Frameworks */ = {isa = PBXBuildFile; fileRef = 46FE93F0218BF2F400810D9A /* CartesianVector */; };
+		46FE93F3218BF30400810D9A /* Shapes in Frameworks */ = {isa = PBXBuildFile; fileRef = 46FE93F2218BF30400810D9A /* Shapes */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,16 +30,14 @@
 /* Begin PBXFileReference section */
 		46FE93D62181567A00810D9A /* CppPractice */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CppPractice; sourceTree = BUILT_PRODUCTS_DIR; };
 		46FE93D92181567A00810D9A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		46FE93E02182554A00810D9A /* Shape.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Shape.cpp; sourceTree = "<group>"; };
-		46FE93E12182554A00810D9A /* Shape.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Shape.hpp; sourceTree = "<group>"; };
-		46FE93E3218270D400810D9A /* CartesianVector.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CartesianVector.cpp; sourceTree = "<group>"; };
-		46FE93E4218270D400810D9A /* CartesianVector.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CartesianVector.hpp; sourceTree = "<group>"; };
 		46FE93E6218352E000810D9A /* VectorCosine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VectorCosine.cpp; sourceTree = "<group>"; };
 		46FE93E7218352E000810D9A /* VectorCosine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VectorCosine.hpp; sourceTree = "<group>"; };
 		46FE93E9218368F800810D9A /* FindSignAndMagnitude.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FindSignAndMagnitude.cpp; sourceTree = "<group>"; };
 		46FE93EA218368F800810D9A /* FindSignAndMagnitude.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FindSignAndMagnitude.hpp; sourceTree = "<group>"; };
 		46FE93EC2184DDDA00810D9A /* EllipsoidIntersect.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EllipsoidIntersect.cpp; sourceTree = "<group>"; };
 		46FE93ED2184DDDA00810D9A /* EllipsoidIntersect.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = EllipsoidIntersect.hpp; sourceTree = "<group>"; };
+		46FE93F0218BF2F400810D9A /* CartesianVector */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CartesianVector; sourceTree = "<group>"; };
+		46FE93F2218BF30400810D9A /* Shapes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Shapes; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46FE93F3218BF30400810D9A /* Shapes in Frameworks */,
+				46FE93F1218BF2F400810D9A /* CartesianVector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +58,7 @@
 			children = (
 				46FE93D82181567A00810D9A /* CppPractice */,
 				46FE93D72181567A00810D9A /* Products */,
+				46FE93EF218BF2F300810D9A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,12 +80,17 @@
 				46FE93EA218368F800810D9A /* FindSignAndMagnitude.hpp */,
 				46FE93E6218352E000810D9A /* VectorCosine.cpp */,
 				46FE93E7218352E000810D9A /* VectorCosine.hpp */,
-				46FE93E3218270D400810D9A /* CartesianVector.cpp */,
-				46FE93E4218270D400810D9A /* CartesianVector.hpp */,
-				46FE93E02182554A00810D9A /* Shape.cpp */,
-				46FE93E12182554A00810D9A /* Shape.hpp */,
 			);
 			path = CppPractice;
+			sourceTree = "<group>";
+		};
+		46FE93EF218BF2F300810D9A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46FE93F2218BF30400810D9A /* Shapes */,
+				46FE93F0218BF2F400810D9A /* CartesianVector */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,8 +151,6 @@
 			files = (
 				46FE93DA2181567A00810D9A /* main.cpp in Sources */,
 				46FE93E8218352E000810D9A /* VectorCosine.cpp in Sources */,
-				46FE93E5218270D400810D9A /* CartesianVector.cpp in Sources */,
-				46FE93E22182554A00810D9A /* Shape.cpp in Sources */,
 				46FE93EB218368F800810D9A /* FindSignAndMagnitude.cpp in Sources */,
 				46FE93EE2184DDDA00810D9A /* EllipsoidIntersect.cpp in Sources */,
 			);
