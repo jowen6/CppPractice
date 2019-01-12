@@ -11,4 +11,18 @@
 
 #include <stdio.h>
 
+//Variadic templates don't work iteratively. Must be done recursively
+
+//Base Case
+template<typename T>
+T adder(T v){
+    return v;
+}
+
+//Higher Cases
+template<typename T, typename... Args>
+T adder(T v, Args... args){
+    return v + adder(args...);
+}
+
 #endif /* VariadicSum_hpp */

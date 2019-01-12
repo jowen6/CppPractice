@@ -13,6 +13,10 @@
 #include "VectorCosine.hpp"
 #include "FindSignAndMagnitude.hpp"
 #include "EllipsoidIntersect.hpp"
+#include "LRUCache.hpp"
+#include "VariadicSum.hpp"
+#include "TemplatedFactorial.hpp"
+
 
 int main(int argc, const char * argv[]) {
     /*
@@ -39,6 +43,8 @@ int main(int argc, const char * argv[]) {
     std::cout << Rec.AreaPlusPerimeter() << "\n";
     */
     //Convert vector to cos(vector) examples
+    
+    /*
     std::vector<double> v1{1,2,3,4,5};
     VecCosIndex(v1);
     VecPrint(v1);
@@ -64,7 +70,25 @@ int main(int argc, const char * argv[]) {
     std::vector<double> VObserver{0, 1, 0};
     std::vector<double> EllipseCoord = EllipsoidIntersect(VObserver, ObserverLoc, 1, 1, 1);
     PrintEllipsoidCoord(EllipseCoord);
+    */
+    
+    
+    LRUCache ca(4);
+    
+    ca.refer(1);
+    ca.refer(2);
+    ca.refer(3);
+    ca.refer(1);
+    ca.refer(4);
+    ca.refer(5);
+    ca.display();
+    
+    std::cout << adder(11.3,2,3,4,5) << "\n";
+
+    std::cout << factorial<5>::value << "\n";
+    
     return 0;
+
 }
 
 
