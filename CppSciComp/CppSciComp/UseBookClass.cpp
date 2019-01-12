@@ -22,7 +22,5 @@ int main(int argc, const char * argv[]) {
     
     std::cout << "year of publiction of " << my_favorite_book.title << " is " << my_favorite_book.GetYearOfPublication() << "\n";
     
-    
-    std::cout << "Hello, World!\n";
     return 0;
 }

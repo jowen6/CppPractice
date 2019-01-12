@@ -8,7 +8,13 @@
 
 #include <cassert>
 #include "Book.hpp"
-
+Book::Book(){
+    author = "unspecified";
+    title  = "unspecified";
+    publisher = "unspecified";
+    format = "unspecified";
+    
+}
 void Book::SetYearOfPublication(int year){
     assert ((year > 1440) && (year < 2020));
     yearOfPublication = year;
