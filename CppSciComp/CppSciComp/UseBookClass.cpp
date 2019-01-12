@@ -20,7 +20,14 @@ int main(int argc, const char * argv[]) {
     my_favorite_book.format = "hardback";
     my_favorite_book.SetYearOfPublication(1865);
     
+    
     std::cout << "year of publiction of " << my_favorite_book.title << " is " << my_favorite_book.GetYearOfPublication() << "\n";
+    
+    Book* p_book_im_reading = new Book;
+    (*p_book_im_reading).author = "Daniel Kahneman";
+    p_book_im_reading->title = "Thinking, Fast and Slow";
+    
+    std::cout << "I am reading " << p_book_im_reading->title << " by " << p_book_im_reading->author << ", its year of publication is " << p_book_im_reading->GetYearOfPublication() << "\n";
     
     return 0;
 }

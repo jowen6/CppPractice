@@ -13,7 +13,7 @@ Book::Book(){
     title  = "unspecified";
     publisher = "unspecified";
     format = "unspecified";
-    
+    yearOfPublication = 0;
 }
 void Book::SetYearOfPublication(int year){
     assert ((year > 1440) && (year < 2020));
