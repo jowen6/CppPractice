@@ -33,5 +33,8 @@ int main(int argc, char* argv[]){
     zs[1] = z2;
     std::cout << "Second element of zs = " << zs[1] << "\n";
     
+    std::cout << "The real part of z1 is " << z1.GetRealPart() << "\n";
+    std::cout << "The imaginary part of z1 is " << z1.GetImaginaryPart() << "\n";
+    
     return 0;
 }

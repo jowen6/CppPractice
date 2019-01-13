@@ -27,6 +27,8 @@ public:
     ComplexNumber operator-() const;
     ComplexNumber operator+(const ComplexNumber& z) const;
     ComplexNumber operator-(const ComplexNumber& z) const;
+    double GetRealPart() const;
+    double GetImaginaryPart() const;
     friend std::ostream& operator<< (std::ostream& output, const ComplexNumber& z);
     
 };

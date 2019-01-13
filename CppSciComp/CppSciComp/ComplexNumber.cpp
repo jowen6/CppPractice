@@ -74,6 +74,16 @@ ComplexNumber ComplexNumber::operator-(const ComplexNumber &z) const{
 }
 
 
+double ComplexNumber::GetRealPart() const{
+    return RealPart;
+}
+
+
+double ComplexNumber::GetImaginaryPart() const{
+    return ImaginaryPart;
+}
+
+
 std::ostream& operator<<(std::ostream& output, const ComplexNumber& z){
     output << "(" << z.RealPart << " ";
     if (z.ImaginaryPart >= 0.0){
