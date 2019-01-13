@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46A2926821AE3773009A24E6 /* VariadicSum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46A2926621AE3773009A24E6 /* VariadicSum.cpp */; };
+		46A2926B21AF2427009A24E6 /* LRUCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46A2926921AF2427009A24E6 /* LRUCache.cpp */; };
+		46A2926E21AF7EF6009A24E6 /* TemplatedFactorial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46A2926C21AF7EF6009A24E6 /* TemplatedFactorial.cpp */; };
 		46FE93DA2181567A00810D9A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46FE93D92181567A00810D9A /* main.cpp */; };
 		46FE93E8218352E000810D9A /* VectorCosine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46FE93E6218352E000810D9A /* VectorCosine.cpp */; };
 		46FE93EB218368F800810D9A /* FindSignAndMagnitude.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46FE93E9218368F800810D9A /* FindSignAndMagnitude.cpp */; };
@@ -28,6 +31,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		46A2926621AE3773009A24E6 /* VariadicSum.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VariadicSum.cpp; sourceTree = "<group>"; };
+		46A2926721AE3773009A24E6 /* VariadicSum.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VariadicSum.hpp; sourceTree = "<group>"; };
+		46A2926921AF2427009A24E6 /* LRUCache.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LRUCache.cpp; sourceTree = "<group>"; };
+		46A2926A21AF2427009A24E6 /* LRUCache.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LRUCache.hpp; sourceTree = "<group>"; };
+		46A2926C21AF7EF6009A24E6 /* TemplatedFactorial.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TemplatedFactorial.cpp; sourceTree = "<group>"; };
+		46A2926D21AF7EF6009A24E6 /* TemplatedFactorial.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TemplatedFactorial.hpp; sourceTree = "<group>"; };
 		46FE93D62181567A00810D9A /* CppPractice */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CppPractice; sourceTree = BUILT_PRODUCTS_DIR; };
 		46FE93D92181567A00810D9A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		46FE93E6218352E000810D9A /* VectorCosine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VectorCosine.cpp; sourceTree = "<group>"; };
@@ -74,7 +83,13 @@
 			isa = PBXGroup;
 			children = (
 				46FE93D92181567A00810D9A /* main.cpp */,
+				46A2926C21AF7EF6009A24E6 /* TemplatedFactorial.cpp */,
+				46A2926D21AF7EF6009A24E6 /* TemplatedFactorial.hpp */,
 				46FE93EC2184DDDA00810D9A /* EllipsoidIntersect.cpp */,
+				46A2926621AE3773009A24E6 /* VariadicSum.cpp */,
+				46A2926721AE3773009A24E6 /* VariadicSum.hpp */,
+				46A2926921AF2427009A24E6 /* LRUCache.cpp */,
+				46A2926A21AF2427009A24E6 /* LRUCache.hpp */,
 				46FE93ED2184DDDA00810D9A /* EllipsoidIntersect.hpp */,
 				46FE93E9218368F800810D9A /* FindSignAndMagnitude.cpp */,
 				46FE93EA218368F800810D9A /* FindSignAndMagnitude.hpp */,
@@ -149,9 +164,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46A2926821AE3773009A24E6 /* VariadicSum.cpp in Sources */,
 				46FE93DA2181567A00810D9A /* main.cpp in Sources */,
+				46A2926B21AF2427009A24E6 /* LRUCache.cpp in Sources */,
 				46FE93E8218352E000810D9A /* VectorCosine.cpp in Sources */,
 				46FE93EB218368F800810D9A /* FindSignAndMagnitude.cpp in Sources */,
+				46A2926E21AF7EF6009A24E6 /* TemplatedFactorial.cpp in Sources */,
 				46FE93EE2184DDDA00810D9A /* EllipsoidIntersect.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
